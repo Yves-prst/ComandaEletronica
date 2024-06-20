@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (comandasPagas.length > 0) {
         comandasPagas.forEach((comanda, index) => {
             htmlContent += `<div class="comanda-info" data-index="${index}">`;
-            htmlContent += `<span class="delete-btn" onclick="deleteComanda(${index})">&times;</span>`;
-            htmlContent += `<h2>${comanda.title}</h2><ul>`;
+            htmlContent += `<span class="delete-btn" onclick="deleteComanda(${index})">&times;</span> <br>`;
+            htmlContent += `<h3>${comanda.title}</h3><ul>`;
             comanda.items.forEach(item => {
                 htmlContent += `<li>${item}</li>`;
             });
