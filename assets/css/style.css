@@ -113,3 +113,10 @@
         width: auto;
     }
 }
+
+#buttonAdd1{
+    background-color: lightgray;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
