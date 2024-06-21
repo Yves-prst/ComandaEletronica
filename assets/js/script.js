@@ -14,7 +14,7 @@ const productsData = {
     13: { name: "Tapioca de Banana Fitness", price:14.50}, 
     14: { name: "Tapioca de Banana ao Mel", price:9.50},
     15: { name: "Tapioca de Banana Gourmet", price:9.50},
-    16: { name: "Tapioca de Coco", price:9},
+    16: { name: "Tapioca de Coco", price:9.50},
     17: { name: "Tapioca da Casa", price:12.50},
     18: { name: "Tapioca de Morango", price:10.50},
     19: { name: "Tapioca Julieta e Catupiry", price:8.50},
@@ -303,7 +303,8 @@ function editarComanda(icon) {
 function confirmComanda() {
     let total = 0;
     let comandaContent = `<div class="menuIcons">
-                                <i class="fas fa-edit" onclick="editarComanda(this)" style="cursor: pointer; margin-right: 50px; margin-left: auto;"></i> 
+                                <i class="fas fa-print" onclick="printDiv(this)" style="cursor: pointer; margin-right: 50px; margin-left: auto;"></i>
+                                <i class="fas fa-edit" onclick="editarComanda(this)" style="cursor: pointer; margin-right: 50px;"></i> 
                                 <i class="fas fa-trash" onclick="deletarComanda(this)" style="cursor: pointer; margin-right: 50px;"></i> 
                                 <i class="fas fa-check" onclick="comandaPaga(this)" style="cursor: pointer; margin-right: auto;"></i> 
                             </div>
@@ -379,4 +380,26 @@ function comandaPaga(icon) {
     console.groupEnd();
 }
 
+function printDiv(icon) {
+    // Encontra o div pai do ícone
+    const divToPrint = icon.closest('.itens').innerHTML;
 
+    // Abre uma nova janela
+    var newWindow = window.open('', '', 'height=600,width=800');
+
+    // Adiciona o conteúdo da div na nova janela
+
+    newWindow.document.write('<link rel="stylesheet" href="assets/css/style.css" type="text/css" />');
+    newWindow.document.write('</head><body>');
+    newWindow.document.write(divToPrint);
+    newWindow.document.write('</body></html>');
+
+    // Fecha o documento da nova janela
+    newWindow.document.close();
+
+    // Espera a janela carregar e chama o método de impressão
+    newWindow.onload = function() {
+        newWindow.print();
+        newWindow.close();
+    };
+}

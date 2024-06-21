@@ -120,3 +120,19 @@
     border: none;
     cursor: pointer;
 }
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 5cm; /* Define a largura para aproximadamente um dedo */
+        font-size: 10px; /* Ajusta o tamanho da fonte para se adequar ao tamanho */
+    }
+
+    .itens {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        word-wrap: break-word; /* Garante que o texto será quebrado corretamente */
+    }
+}
