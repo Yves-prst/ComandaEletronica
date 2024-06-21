@@ -95,10 +95,11 @@
 }
 
 .menuIcons{
-    
     display: flex;
     gap: 10px; 
 }
+
+
 
 .inputBt{
     display: flex;
@@ -112,6 +113,7 @@
     .divAddCorpo{
         width: auto;
     }
+
 }
 
 #buttonAdd1{

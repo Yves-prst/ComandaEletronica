@@ -31,45 +31,46 @@ const productsData = {
     30: { name: "Gengibre", price:0},
     31: { name: "Maracujá", price:0},      
     32: { name: "Limão, Abacaxi, Gengibre, Maracujá", price:0},
-    33: { name: "Coco Verde Gelado", price:10},    
-    34: { name: "Água Garrafa", price:3},  
-    35: { name: "Refrigerante lata", price:5},    
-    36: { name: "Café Espresso Supremo Puro ou c/ Leite", price:5},    
-    37: { name: "Café Melitta Filtrado Puro ou c/ Leite", price:5},    
-    38: { name: "Chá Mate Quente Natural ou Sabores", price:4},      
-    39: { name: "Chocolatto Espresso Levemente Adocicado", price:8},
-    40: { name: "Chocolate Nestlé 100% Cacau", price:8},
-    41: { name: "Achocolatado Nescau", price:5},
-    42: { name: "Geladinho de Abacate", price:3.50},   
-    43: { name: "Geladinho de Coco", price:3.50},   
-    44: { name: "Geladinho de Chocolate", price:3.50},   
-    45: { name: "Geladinho de Maracujá", price:3.50}, 
-    46: { name: "Geladinho de Melancia", price:3.50},    
-    47: { name: "Geladinho de Morango", price:3.50},    
-    48: { name: "Geladinho de Paçoca", price:3.50},   
-    49: { name: "Amendoim Doce Cricri", price:5},    
-    50: { name: "Amendoim Salgado na Manteiga", price:5},    
-    51: { name: "+ Cheddar", price:3},    
-    52: { name: "+ Catupiry", price:3},
-    53: { name: "+ Muçarela", price:3},     
-    54: { name: "+ Carne Bovina", price:3},   
-    55: { name: "+ Ovo", price:3},   
-    56: { name: "+ Morango", price:3},     
-    57: { name: "+ Chocolate", price:3},     
-    58: { name: "+ Coco", price:3},  
-    59: { name: "+ Leite Condensado", price:3},   
-    60: { name: "+ Goiabada", price:3},   
-    61: { name: "+ Tomate", price:3},    
-    62: { name: "+ Banana", price:3},   
-    63: { name: "+ Mel", price:3},    
-    64: { name: "+ Frango" ,price:3},   
-    65: { name: "+ Canela", price:0},   
-    66: { name: "Sem Cebola", price:0},    
-    67: { name: "Sem Tomate" , price:0},  
-    68: { name: "Sem orégano", price:0},   
-    69: { name: "Sem orapronóbis", price:0},  
-    70: { name: "Sem Gelo", price:0},
-    71: { name: "Para Viagem", price:0}
+    33: { name: "Coco Verde Gelado", price:10}, 
+    34: { name: "Garrafa Coco", price:12},   
+    35: { name: "Água Garrafa", price:3},  
+    36: { name: "Refrigerante lata", price:5},    
+    37: { name: "Café Espresso Supremo Puro ou c/ Leite", price:5},    
+    38: { name: "Café Melitta Filtrado Puro ou c/ Leite", price:5},    
+    39: { name: "Chá Mate Quente Natural ou Sabores", price:4},      
+    40: { name: "Chocolatto Espresso Levemente Adocicado", price:8},
+    41: { name: "Chocolate Nestlé 100% Cacau", price:8},
+    42: { name: "Achocolatado Nescau", price:5},
+    43: { name: "Geladinho de Abacate", price:3.50},   
+    44: { name: "Geladinho de Coco", price:3.50},   
+    45: { name: "Geladinho de Chocolate", price:3.50},   
+    46: { name: "Geladinho de Maracujá", price:3.50}, 
+    47: { name: "Geladinho de Melancia", price:3.50},    
+    48: { name: "Geladinho de Morango", price:3.50},    
+    49: { name: "Geladinho de Paçoca", price:3.50},   
+    50: { name: "Amendoim Doce Cricri", price:5},    
+    51: { name: "Amendoim Salgado na Manteiga", price:5},    
+    52: { name: "+ Cheddar", price:3},    
+    53: { name: "+ Catupiry", price:3},
+    54: { name: "+ Muçarela", price:3},     
+    55: { name: "+ Carne Bovina", price:3},   
+    56: { name: "+ Ovo", price:3},   
+    57: { name: "+ Morango", price:3},     
+    58: { name: "+ Chocolate", price:3},     
+    59: { name: "+ Coco", price:3},  
+    60: { name: "+ Leite Condensado", price:3},   
+    61: { name: "+ Goiabada", price:3},   
+    62: { name: "+ Tomate", price:3},    
+    63: { name: "+ Banana", price:3},   
+    64: { name: "+ Mel", price:3},    
+    65: { name: "+ Frango" ,price:3},   
+    66: { name: "+ Canela", price:0},   
+    67: { name: "Sem Cebola", price:0},    
+    68: { name: "Sem Tomate" , price:0},  
+    69: { name: "Sem orégano", price:0},   
+    70: { name: "Sem orapronóbis", price:0},  
+    71: { name: "Sem Gelo", price:0},
+    72: { name: "Para Viagem", price:0}
 };
 
 let currentComanda = [];
@@ -135,9 +136,10 @@ function mostarBeb(){
     var show = document.querySelector('div#bebidas')
     show.style.display = 'block'
     show.innerHTML = '<h1>Bebidas</h1><br>' +
-    '33 - Coco Verde Gelado <br>'+  
-    '34 - Água Garrafa <br>'+
-    '35 - Refrigerante lata <br>'
+    '33 - Coco Verde Gelado <br>'+
+    '34 - Garrafa Coco <br>'+  
+    '35 - Água Garrafa <br>'+
+    '36 - Refrigerante lata <br>'
 
 }
 
@@ -146,12 +148,12 @@ function mostarCaf(){
     var show = document.querySelector('div#cafe')
     show.style.display = 'block'
     show.innerHTML = '<h1>Cafés</h1><br>' +
-    '36 - Café Espresso Supremo Puro ou c/ Leite <br>'+  
-    '37 - Café Melitta Filtrado Puro ou c/ Leite <br>'+
-    '38 - Chá Mate Quente Natural ou Sabores <br>'+   
-    '39 - Chocolatto Espresso Levemente Adocicado <br>'+
-    '40 - Chocolate Nestlé 100% Cacau <br>'+
-    '41 - Achocolatado Nescau <br>'
+    '37 - Café Espresso Supremo Puro ou c/ Leite <br>'+  
+    '38 - Café Melitta Filtrado Puro ou c/ Leite <br>'+
+    '39 - Chá Mate Quente Natural ou Sabores <br>'+   
+    '40 - Chocolatto Espresso Levemente Adocicado <br>'+
+    '41 - Chocolate Nestlé 100% Cacau <br>'+
+    '42 - Achocolatado Nescau <br>'
 
 }
 
@@ -160,13 +162,13 @@ function mostarGel(){
     var show = document.querySelector('div#geladinho')
     show.style.display = 'block'
     show.innerHTML = '<h1>Geladinhos</h1><br>' +
-    '42 - Geladinho de Abacate <br>'+
-    '43 - Geladinho de Coco <br>'+
-    '44 - Geladinho de Chocolate <br>'+
-    '45 - Geladinho de Maracujá <br>'+
-    '46 - Geladinho de Melancia <br>'+ 
-    '47 - Geladinho de Morango <br>'+  
-    '48 - Geladinho de Paçoca <br>'
+    '43 - Geladinho de Abacate <br>'+
+    '44 - Geladinho de Coco <br>'+
+    '45 - Geladinho de Chocolate <br>'+
+    '46 - Geladinho de Maracujá <br>'+
+    '47 - Geladinho de Melancia <br>'+ 
+    '48 - Geladinho de Morango <br>'+  
+    '49 - Geladinho de Paçoca <br>'
 }
 
 function mostarAme(){
@@ -174,8 +176,8 @@ function mostarAme(){
     var show = document.querySelector('div#amendoim')
     show.style.display = 'block'
     show.innerHTML = '<h1>Amendoins</h1><br>' +
-    '49 - Amendoim Doce Cricri <br>'+ 
-    '50 - Amendoim Salgado na Manteiga <br>'  
+    '50 - Amendoim Doce Cricri <br>'+ 
+    '51 - Amendoim Salgado na Manteiga <br>'  
 
 }
 
@@ -184,21 +186,21 @@ function mostarAdd(){
     var show = document.querySelector('div#adds')
     show.style.display = 'block'
     show.innerHTML = '<h1>Adicionais</h1><br>' +
-    '51 - Cheddar <br>'+   
-    '52 - Catupiry <br>'+
-    '53 - Muçarela <br>'+    
-    '54 - Carne Bovina <br>'+  
-    '55 - Ovo <br>'+
-    '56 - Morango <br>'+
-    '57 - Chocolate <br>'+
-    '58 - Coco <br>'+ 
-    '59 - Leite Condensado <br>'+ 
-    '60 - Goiabada <br>'+
-    '61 - Tomate <br>'+
-    '62 - Banana <br>'+
-    '63 - Mel <br>'+    
-    '64 - Frango <br>'+
-    '65 - Canela <br>'
+    '52 - Cheddar <br>'+   
+    '53 - Catupiry <br>'+
+    '54 - Muçarela <br>'+    
+    '55 - Carne Bovina <br>'+  
+    '56 - Ovo <br>'+
+    '57 - Morango <br>'+
+    '58 - Chocolate <br>'+
+    '59 - Coco <br>'+ 
+    '60 - Leite Condensado <br>'+ 
+    '61 - Goiabada <br>'+
+    '62 - Tomate <br>'+
+    '63 - Banana <br>'+
+    '64 - Mel <br>'+    
+    '65 - Frango <br>'+
+    '66 - Canela <br>'
 }
 
 function mostarObs(){
@@ -206,12 +208,12 @@ function mostarObs(){
     var show = document.querySelector('div#obs')
     show.style.display = 'block'
     show.innerHTML = '<h1>Observações</h1><br>' +
-    '66 - Sem Cebola <br>'+    
-    '67 - Sem Tomate <br>'+
-    '68 - Sem orégano <br>'+ 
-    '69 - Sem orapronóbis <br>'+
-    '70 - Sem Gelo <br>'+
-    '71 - Para Viagem <br>'
+    '67 - Sem Cebola <br>'+    
+    '68 - Sem Tomate <br>'+
+    '69 - Sem orégano <br>'+ 
+    '70 - Sem orapronóbis <br>'+
+    '71 - Sem Gelo <br>'+
+    '72 - Para Viagem <br>'
 }
 
 function limparTela(){
@@ -303,9 +305,9 @@ function editarComanda(icon) {
 function confirmComanda() {
     let total = 0;
     let comandaContent = `<div class="menuIcons">
-                                <i class="fas fa-print" onclick="printDiv(this)" style="cursor: pointer; margin-right: 50px; margin-left: auto;"></i>
-                                <i class="fas fa-edit" onclick="editarComanda(this)" style="cursor: pointer; margin-right: 50px;"></i> 
-                                <i class="fas fa-trash" onclick="deletarComanda(this)" style="cursor: pointer; margin-right: 50px;"></i> 
+                                <i id="icone" class="fas fa-print" onclick="printDiv(this)" style="cursor: pointer; margin-right: auto; margin-left: auto;"></i>
+                                <i id="icone" class="fas fa-edit" onclick="editarComanda(this)" style="cursor: pointer; margin-right: auto;"></i> 
+                                <i id="icone" class="fas fa-trash" onclick="deletarComanda(this)" style="cursor: pointer; margin-right: auto;"></i> 
                                 <i class="fas fa-check" onclick="comandaPaga(this)" style="cursor: pointer; margin-right: auto;"></i> 
                             </div>
         <br>`;
