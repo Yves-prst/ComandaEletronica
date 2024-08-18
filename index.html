@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/js/script.js"></script>
+
+        <title>Comandas</title>
+</head>
+
+<body>
+
+        <section class="faixaMenu">
+
+                <br>
+
+                <h1>Menu</h1>
+
+                <div class="menu">
+
+                        <button onclick="mostarTap()">Tapiocas</button>
+                        <button onclick="mostarCal()">Caldo de Cana</button>
+                        <button onclick="mostarBeb()">Bebidas</button>
+                        <button onclick="mostarCaf()">Cafés</button>
+                        <button onclick="mostarGel()">Geladinho</button>
+                        <button onclick="mostarAme()">Amendoim</button>
+                        <button onclick="mostarAdd()">Adicionais</button>
+                        <button onclick="mostarObs()">Observações</button>
+
+                </div>
+
+                <div id="content">
+
+                        <div id="tapiocas" class="products"></div>
+                        <div id="caldo" class="products"></div>
+                        <div id="bebidas" class="products"></div>
+                        <div id="cafe" class="products"></div>
+                        <div id="geladinho" class="products"></div>
+                        <div id="amendoim" class="products"></div>
+                        <div id="adds" class="products"></div>
+                        <div id="obs" class="products"></div>
+
+                </div>
+
+        </section>
+
+        <section class="corpo">
+
+                <section>
+
+                        <br>
+
+                        <h1>Comanda</h1>
+
+                        <br>
+
+                        <div id="adicionado" class="divAddCorpo"></div>
+
+                        <br>
+
+                        <div class="inputs">
+                                <input class="cdg" type="text" id="productCode"
+                                        placeholder="Digite o código do produto">
+                        </div>
+                </section>
+                <br>
+
+                <div class="inputBt">
+
+                        <button class="cdgBt" onclick="addProduct()">Adicionar</button>
+                        <button class="cdgBt" onclick="confirmComanda()">Confirmar</button>
+                        <button onclick="limparTela()" class="cdgBt">Limpar tela</button>
+                        <button class="cdgBt"><a href="ComandasPagas.html" target="_blank"> Com Pagas</a></button>
+                </div>
+                <br>
+                <section class="comandas"></section>
+
+        </section>
+
+
+
+</body>
+
+</html>

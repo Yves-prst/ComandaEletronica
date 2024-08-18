@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#total-comandas{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#comandas-pagas{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.comanda-info {
+    background-color: lightgray;
+    border: 1px solid #000;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.comanda-info h2 {
+    margin: 0;
+}
+.comanda-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+.comanda-info ul li {
+    margin: 5px 0;
+}
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media(max-width: 700px){
+    #comandas-pagas{
+        grid-template-columns: repeat(3, 2fr);
+    }
+}
