@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 
-.faixaMenu{
+.faixaMenu {
     background-color: rgb(240, 237, 237);
     width: 100%;
 }
@@ -21,7 +21,7 @@
 
 .menu button {
     height: 50px;
-    width: 145px; 
+    width: 145px;
     background-color: lightseagreen;
     border: none;
     border-radius: 5px;
@@ -30,16 +30,17 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
+
 .menu button:hover {
     background-color: darkcyan;
 }
 
-.corpo{
+.corpo {
     padding: 5px;
-    
+
 }
 
-.divAddCorpo{
+.divAddCorpo {
     border: 1 solid #000;
     background-color: lightgray;
     border-radius: 10px;
@@ -50,13 +51,15 @@
     padding: 10px;
 }
 
-.corpo, .faixaMenu h1{
+.corpo,
+.faixaMenu h1 {
     text-align: center;
 }
 
-#content{
+#content {
     padding: 20px;
 }
+
 .comandas {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
@@ -75,13 +78,13 @@
     gap: 10px;
 }
 
-.cdg{
+.cdg {
     height: 30px;
     text-align: center;
     border-radius: 15px;
 }
 
-.cdgBt{
+.cdgBt {
     height: 30px;
     width: 100px;
     text-align: center;
@@ -90,18 +93,18 @@
     cursor: pointer;
 }
 
-.cdgBt a{
+.cdgBt a {
     color: black;
 }
 
-.menuIcons{
+.menuIcons {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
 
 
-.inputBt{
+.inputBt {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -109,14 +112,14 @@
     justify-content: center;
 }
 
-@media(max-width: 430px){
-    .divAddCorpo{
+@media(max-width: 430px) {
+    .divAddCorpo {
         width: auto;
     }
 
 }
 
-#buttonAdd1{
+#buttonAdd1 {
     background-color: lightgray;
     color: black;
     border: none;
@@ -124,17 +127,23 @@
 }
 
 @media print {
-    body {
-        margin: 0;
-        padding: 0;
-        width: 5cm; 
-        font-size: 10px; 
-    }
 
     .itens {
+        position: absolute;
+        top: 0;
+        left: 0;
         margin: 0;
         padding: 0;
         width: 100%;
-        word-wrap: break-word; 
+        word-wrap: break-word;
+    }
+
+    .inputBt,
+    .inputs, 
+    .menuIcons, 
+    #adicionado, 
+    .faixaMenu, 
+    .corpo h1 {
+        visibility: hidden;
     }
 }

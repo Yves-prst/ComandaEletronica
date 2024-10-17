@@ -20,11 +20,11 @@ const productsData = {
     19: { name: "Tapioca Julieta e Catupiry", price:10},
     20: { name: "Tapioca de Prestígio",  price:13.50},
     21: { name: "Tapioca Romeu e Julieta", price:9.50},
-    22: { name: "Copo 400ml", price:6},   
-    23: { name: "Copo 500ml" ,price:7},    
-    24: { name: "Garrafa 500ml", price:9},   
-    25: { name: "Garrafa 1l", price:15},  
-    26: { name: "Garrafa 2l", price:25},
+    22: { name: "Copo 400ml", price:7},   
+    23: { name: "Copo 500ml" ,price:8},    
+    24: { name: "Garrafa 500ml", price:10},   
+    25: { name: "Garrafa 1l", price:18},  
+    26: { name: "Garrafa 2l", price:28},
     27: { name: "Natural", price:0},
     28: { name: "Limão", price:0},
     29: { name: "Abacaxi", price:0},
@@ -71,18 +71,18 @@ const productsData = {
     70: { name: "Sem orapronóbis", price:0},  
     71: { name: "Sem Gelo", price:0},
     72: { name: "Para Viagem", price:0}
-};
+}
 
-let currentComanda = [];
+let currentComanda = []
 
 function hideAllProducts() {
     document.querySelectorAll('.products').forEach(div => {
         div.style.display = 'none'
-    });
+    })
 }
 
 function mostarTap() {
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#tapiocas')
     show.style.display = 'block'
     show.innerHTML = '<h1>Tapiocas</h1><br>' +
@@ -107,11 +107,11 @@ function mostarTap() {
         '19 - Tapioca Julieta e Catupiry <br>'+
         '20 - Tapioca de Prestígio <br>'+
         '21 - Tapioca Romeu e Julieta <br>'
-    // Adicione o resto dos produtos aqui...
+
 }
 
 function mostarCal() {
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#caldo')
     show.style.display = 'block'
     show.innerHTML = '<h1>Caldo de Cana</h1><br>' +
@@ -127,12 +127,11 @@ function mostarCal() {
     '30 - Gengibre <br>'+
     '31 - Maracujá <br>'+    
     '32 - Limão, Abacaxi, Gengibre, Maracujá <br>'
-        
-    // Adicione o resto dos produtos aqui...
+
 }
 
 function mostarBeb(){
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#bebidas')
     show.style.display = 'block'
     show.innerHTML = '<h1>Bebidas</h1><br>' +
@@ -144,7 +143,7 @@ function mostarBeb(){
 }
 
 function mostarCaf(){
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#cafe')
     show.style.display = 'block'
     show.innerHTML = '<h1>Cafés</h1><br>' +
@@ -158,7 +157,7 @@ function mostarCaf(){
 }
 
 function mostarGel(){
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#geladinho')
     show.style.display = 'block'
     show.innerHTML = '<h1>Geladinhos</h1><br>' +
@@ -172,7 +171,7 @@ function mostarGel(){
 }
 
 function mostarAme(){
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#amendoim')
     show.style.display = 'block'
     show.innerHTML = '<h1>Amendoins</h1><br>' +
@@ -182,7 +181,7 @@ function mostarAme(){
 }
 
 function mostarAdd(){
-    hideAllProducts();
+    hideAllProducts()
     var show = document.querySelector('div#adds')
     show.style.display = 'block'
     show.innerHTML = '<h1>Adicionais</h1><br>' +
@@ -221,130 +220,126 @@ function limparTela(){
 }
 
 function addProduct() {
-    const code = parseInt(document.getElementById('productCode').value);
+    const code = parseInt(document.getElementById('productCode').value)
 
     if (productsData[code]) {
         const product = {
             code: code,
             name: productsData[code].name,
             price: productsData[code].price,
-        };
+        }
 
-        currentComanda.push(product);
+        currentComanda.push(product)
 
-        // Atualize o texto exibido na tela
-        const txt = document.querySelector('div#adicionado');
+        // Atualiza o texto exibido na tela
+        const txt = document.querySelector('div#adicionado')
         txt.innerHTML += `<div class="Adi" style="display: flex; justify-content: space-between; align-items: center;">
                             <span>${product.name} - R$${product.price.toFixed(2)}</span>
                             <button id="buttonAdd1" onclick="deleteLinha(this)" style="margin-left: auto;"><i class="fas fa-x"></i></button>
-                          </div>`;
+                          </div>`
 
-        document.getElementById('productCode').value = '';
-        document.querySelector('.cdg').value = '';
+        document.getElementById('productCode').value = ''
+        document.querySelector('.cdg').value = ''
     } else {
-        alert('Código de produto inválido.');
+        alert('Código de produto inválido.')
     }
 }
 
 function deleteLinha(button) {
-    // Encontra o div pai do botão
-    const div = button.closest('div');
 
-    // Remove o div pai
-    div.remove();
+    const div = button.closest('div')
 
-    // Remove o item correspondente da comanda atual
-    const itemName = div.textContent.split(' - ')[0].trim();
-    currentComanda = currentComanda.filter(item => item.name !== itemName);
+    div.remove()
+
+    const itemName = div.textContent.split(' - ')[0].trim()
+    currentComanda = currentComanda.filter(item => item.name !== itemName)
 }
 
 
-let numeroComanda = 1;
-let comandaEditadaNumero = null; // Variável para controlar o número da comanda editada
+let numeroComanda = 1
+let comandaEditadaNumero = null 
 
 function editarComanda(icon) {
-    const comandaDiv = icon.closest('.itens');
-    const comandaTitle = comandaDiv.querySelector('h2').textContent;
+    const comandaDiv = icon.closest('.itens')
+    const comandaTitle = comandaDiv.querySelector('h2').textContent
 
-    // Definir comandaEditadaNumero como o número da comanda que está sendo editada
-    comandaEditadaNumero = parseInt(comandaTitle.split(' ')[1]); // Extrai o número da comanda
+    comandaEditadaNumero = parseInt(comandaTitle.split(' ')[1]) 
 
-    const products = comandaDiv.querySelectorAll('ul li');
-    const total = comandaDiv.querySelector('p').textContent;
+    const products = comandaDiv.querySelectorAll('ul li')
+    const total = comandaDiv.querySelector('p').textContent
 
-    currentComanda = [];
+    currentComanda = []
 
     products.forEach(item => {
-        const itemName = item.textContent.split(' - ')[0].trim();
-        const itemPrice = parseFloat(item.textContent.split(' - ')[1].replace('R$', '').trim());
-        const code = Object.keys(productsData).find(key => productsData[key].name === itemName);
+        const itemName = item.textContent.split(' - ')[0].trim()
+        const itemPrice = parseFloat(item.textContent.split(' - ')[1].replace('R$', '').trim())
+        const code = Object.keys(productsData).find(key => productsData[key].name === itemName)
 
         if (code) {
             currentComanda.push({
                 code: parseInt(code),
                 name: itemName,
                 price: itemPrice
-            });
+            })
         }
-    });
+    })
 
-    comandaDiv.innerHTML = '';
+    comandaDiv.innerHTML = ''
 
-    // Atualiza o HTML para mostrar os produtos atuais na tela de adição
-    const txt = document.querySelector('div#adicionado');
-    txt.innerHTML = '';
+    const txt = document.querySelector('div#adicionado')
+    txt.innerHTML = ''
 
     currentComanda.forEach(product => {
         txt.innerHTML += `<div class="Adi" style="display: flex; justify-content: space-between; align-items: center;">
                             <span>${product.name} - R$${product.price.toFixed(2)}</span>
                             <button id="buttonAdd1" onclick="deleteLinha(this)" style="margin-left: auto;"><i class="fas fa-x"></i></button>
-                          </div>`;
-    });
+                          </div>`
+    })
 }
 
 function confirmComanda() {
-    let total = 0;
+    let total = 0
     let comandaContent = `<div class="menuIcons">
-                                <i id="icone" class="fas fa-print" onclick="printDiv(this)" style="cursor: pointer; margin-right: auto; margin-left: auto;"></i>
+                                <i id="icone" class="fas fa-print" onclick="window.print()" style="cursor: pointer; margin-right: auto; margin-left: auto;"></i>
                                 <i id="icone" class="fas fa-edit" onclick="editarComanda(this)" style="cursor: pointer; margin-right: auto;"></i> 
                                 <i id="icone" class="fas fa-trash" onclick="deletarComanda(this)" style="cursor: pointer; margin-right: auto;"></i> 
                                 <i class="fas fa-check" onclick="comandaPaga(this)" style="cursor: pointer; margin-right: auto;"></i> 
                             </div>
-        <br>`;
+        <br>`
 
     if (comandaEditadaNumero !== null) {
-        comandaContent += `<h2>Comanda ${comandaEditadaNumero}</h2><ul><br>`;
-        comandaEditadaNumero = null; // Limpa o número da comanda editada
+        comandaContent += `<h2>Comanda ${comandaEditadaNumero}</h2><ul><br>`
+        comandaEditadaNumero = null 
     } else {
-        comandaContent += `<h2>Comanda ${numeroComanda}</h2><ul><br>`;
-        numeroComanda++; // Incrementa o número da próxima comanda
+        comandaContent += `<h2>Comanda ${numeroComanda}</h2><ul><br>`
+        numeroComanda++
     }
 
     currentComanda.forEach(product => {
-        comandaContent += `<li>${product.name} - R$${product.price.toFixed(2)} </li><br>`;
-        total += product.price;
-    });
+        comandaContent += `<li>${product.name} - R$${product.price.toFixed(2)} </li><br>`
+        total += product.price
+    })
 
-    comandaContent += `<br><hr><br></ul><p>Total: R$${total.toFixed(2)}</p>`;
+    comandaContent += `<br><hr><br></ul><p>Total: R$${total.toFixed(2)}</p>`
 
-    const comandaDivs = document.querySelectorAll('.itens');
-    let comandaDiv = Array.from(comandaDivs).find(div => !div.innerHTML);
+    const comandaDivs = document.querySelectorAll('.itens')
+    let comandaDiv = Array.from(comandaDivs).find(div => !div.innerHTML)
 
     if (!comandaDiv) {
         if (currentComanda.length > 0) {
-            comandaDiv = document.createElement('div');
-            comandaDiv.classList.add('itens');
-            document.querySelector('.comandas').appendChild(comandaDiv);
+            comandaDiv = document.createElement('div')
+            comandaDiv.classList.add('itens')
+            document.querySelector('.comandas').appendChild(comandaDiv)
         } else {
-            alert('Comanda vazia');
+            alert('Comanda vazia')
         }   
     }
 
-    comandaDiv.innerHTML = comandaContent;
-    currentComanda = [];
+    comandaDiv.innerHTML = comandaContent
+    currentComanda = []
 
-    var text = document.querySelector('div#adicionado'); 
-    text.innerHTML= '';
+    var text = document.querySelector('div#adicionado') 
+    text.innerHTML= ''
 }
 
 function deletarComanda(icon) {
@@ -355,54 +350,28 @@ function deletarComanda(icon) {
 }
 
 function comandaPaga(icon) {
-    const comandaDiv = icon.closest('.itens');
-    const comandaTitle = comandaDiv.querySelector('h2').textContent;
-    const comandaListItems = comandaDiv.querySelectorAll('ul li');
-     const comandaTotal = comandaDiv.querySelector('p').textContent;
+    const comandaDiv = icon.closest('.itens')
+    const comandaTitle = comandaDiv.querySelector('h2').textContent
+    const comandaListItems = comandaDiv.querySelectorAll('ul li')
+     const comandaTotal = comandaDiv.querySelector('p').textContent
 
     const comanda = {
         title: comandaTitle,
         items: Array.from(comandaListItems).map(item => item.textContent),
         total: comandaTotal
-    };
+    }
 
-    let comandasPagas = JSON.parse(localStorage.getItem('comandasPagas')) || [];
-    comandasPagas.push(comanda);
-    localStorage.setItem('comandasPagas', JSON.stringify(comandasPagas));
+    let comandasPagas = JSON.parse(localStorage.getItem('comandasPagas')) || []
+    comandasPagas.push(comanda)
+    localStorage.setItem('comandasPagas', JSON.stringify(comandasPagas))
             
-            // Remove comanda da tela principal
-    comandaDiv.remove();
+    comandaDiv.remove()
 
-    console.group(`Comanda: ${comandaTitle}`);
-    console.log('Itens:');
+    console.group(`Comanda: ${comandaTitle}`)
+    console.log('Itens:')
     comandaListItems.forEach(item => {
-    console.log(item.textContent);
-    });
-    console.log(comandaTotal);
-    console.groupEnd();
-}
-
-function printDiv(icon) {
-    
-    // Encontra o div pai do ícone
-    const divToPrint = icon.closest('.itens').innerHTML;
-
-    // Abre uma nova janela
-    var newWindow = window.open('', '', 'height=600,width=800');
-
-    // Adiciona o conteúdo da div na nova janela
-
-    newWindow.document.write('<link rel="stylesheet" href="assets/css/style.css" type="text/css" />');
-    newWindow.document.write('</head><body>');
-    newWindow.document.write(divToPrint);
-    newWindow.document.write('</body></html>');
-
-    // Fecha o documento da nova janela
-    newWindow.document.close();
-
-    // Espera a janela carregar e chama o método de impressão
-    newWindow.onload = function() {
-        newWindow.print();
-        newWindow.close();
-    };
+    console.log(item.textContent)
+    })
+    console.log(comandaTotal)
+    console.groupEnd()
 }
