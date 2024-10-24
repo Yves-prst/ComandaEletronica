@@ -1,4 +1,5 @@
 const productsData = {
+    0: { name: "Tapioca de Carne seca", price: 19.50 },
     1: { name: "Tapioca de Calabresa", price: 10.50 },
     2: { name: "Tapioca de Carne Bovina Gourmet", price: 13.50 },
     3: { name: "Tapioca Especial", price: 13.50 },
@@ -86,6 +87,7 @@ function mostarTap() {
     var show = document.querySelector('div#tapiocas')
     show.style.display = 'block'
     show.innerHTML = '<h1>Tapiocas</h1><br>' +
+        '0 - Tapioca de Carne seca <br>'+
         '1 - Tapioca de Calabresa<br>' +
         '2 - Tapioca de Carne Bovina Gourmet<br>' +
         '3 - Tapioca Especial <br>' +
