@@ -54,7 +54,7 @@ const productsData = {
     52: { name: "+ Cheddar", price:3},    
     53: { name: "+ Catupiry", price:3},
     54: { name: "+ Muçarela", price:3},     
-    55: { name: "+ Carne Bovina", price:3},   
+    55: { name: "+ Carne Bovina", price:4},   
     56: { name: "+ Ovo", price:3},   
     57: { name: "+ Morango", price:3},     
     58: { name: "+ Chocolate", price:3},     
@@ -64,14 +64,15 @@ const productsData = {
     62: { name: "+ Tomate", price:3},    
     63: { name: "+ Banana", price:3},   
     64: { name: "+ Mel", price:3},    
-    65: { name: "+ Frango" ,price:3},   
-    66: { name: "+ Canela", price:0},   
-    67: { name: "Sem Cebola", price:0},    
-    68: { name: "Sem Tomate" , price:0},  
-    69: { name: "Sem orégano", price:0},   
-    70: { name: "Sem orapronóbis", price:0},  
-    71: { name: "Sem Gelo", price:0},
-    72: { name: "Para Viagem", price:0}
+    65: { name: "+ Frango" ,price:4},   
+    66: { name: "+ Canela", price:0},  
+    67: { name: "+ Carne Seca", price:5}, 
+    68: { name: "Sem Cebola", price:0},    
+    69: { name: "Sem Tomate" , price:0},  
+    70: { name: "Sem orégano", price:0},   
+    71: { name: "Sem orapronóbis", price:0},  
+    72: { name: "Sem Gelo", price:0},
+    73: { name: "Para Viagem", price:0}
 }
 
 let currentComanda = []
@@ -201,7 +202,8 @@ function mostarAdd(){
     '63 - Banana <br>'+
     '64 - Mel <br>'+    
     '65 - Frango <br>'+
-    '66 - Canela <br>'
+    '66 - Canela <br>'+
+    '67 - Carne Seca <br>'
 }
 
 function mostarObs(){
@@ -209,12 +211,12 @@ function mostarObs(){
     var show = document.querySelector('div#obs')
     show.style.display = 'block'
     show.innerHTML = '<h1>Observações</h1><br>' +
-    '67 - Sem Cebola <br>'+    
-    '68 - Sem Tomate <br>'+
-    '69 - Sem orégano <br>'+ 
-    '70 - Sem orapronóbis <br>'+
-    '71 - Sem Gelo <br>'+
-    '72 - Para Viagem <br>'
+    '68 - Sem Cebola <br>'+    
+    '69 - Sem Tomate <br>'+
+    '70 - Sem orégano <br>'+ 
+    '71 - Sem orapronóbis <br>'+
+    '72 - Sem Gelo <br>'+
+    '73 - Para Viagem <br>'
 }
 
 function limparTela(){
