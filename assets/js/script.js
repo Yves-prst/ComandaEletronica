@@ -35,7 +35,7 @@ const productsData = {
     33: { name: "Coco Verde Gelado", price:10}, 
     34: { name: "Garrafa Coco", price:12},   
     35: { name: "Água Garrafa", price:3},  
-    36: { name: "Refrigerante lata", price:6},    
+    36: { name: "Refrigerante em lata", price:6},    
     37: { name: "Café Espresso Supremo Puro ou c/ Leite", price:5},    
     38: { name: "Café Melitta Filtrado Puro ou c/ Leite", price:5},    
     39: { name: "Chá Mate Quente Natural ou Sabores", price:4},      
@@ -141,7 +141,7 @@ function mostarBeb(){
     '33 - Coco Verde Gelado <br>'+
     '34 - Garrafa Coco <br>'+  
     '35 - Água Garrafa <br>'+
-    '36 - Refrigerante lata <br>'
+    '36 - Refrigerante em lata <br>'
 
 }
 
