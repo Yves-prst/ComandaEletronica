@@ -18,7 +18,7 @@ const productsData = {
     16: { name: "Tapioca de Coco", price:10.50},
     17: { name: "Tapioca da Casa", price:13.50},
     18: { name: "Tapioca de Morango", price:10.50},
-    19: { name: "Tapioca Julieta e Catupiry", price:10},
+    19: { name: "Tapioca de Doce de Abobóra c/ Creme de Ricota", price:13.50},
     20: { name: "Tapioca de Prestígio",  price:13.50},
     21: { name: "Tapioca Romeu e Julieta", price:9.50},
     22: { name: "Copo 400ml", price:7},   
