@@ -1,45 +1,45 @@
 const productsData = {
     0: { name: "Tapioca de Carne seca", price: 19.50 },
-    1: { name: "Tapioca de Calabresa", price: 10.50 },
-    2: { name: "Tapioca de Carne Bovina Gourmet", price: 13.50 },
-    3: { name: "Tapioca Especial", price: 13.50 },
-    4: { name: "Tapioca de Frango", price: 9.50 },
-    5: { name: "Tapioca de Frango c/ Catupiry", price:11.50},
-    6: { name: "Tapioca de Frango c/ Cheddar", price:11.50}, 
-    7: { name: "Tapioca de Frango c/ Batata Doce", price:10.50}, 
-    8: { name: "Tapioca de Pizza", price:10},
-    9: { name: "Tapiproteica", price:15.50},
-    10: { name: "Tapiegg", price:9.50},
-    11: { name: "Tapifitness", price:10.50},
-    12: { name: "Tapioca de Banana c/ Canela", price:9},
+    1: { name: "Tapioca de Calabresa", price: 11.50 },
+    2: { name: "Tapioca de Carne Bovina Gourmet", price: 14.50 },
+    3: { name: "Tapioca Especial", price: 14.50 },
+    4: { name: "Tapioca de Frango", price: 10.50 },
+    5: { name: "Tapioca de Frango c/ Catupiry", price:12.50},
+    6: { name: "Tapioca de Frango c/ Cheddar", price:12.50}, 
+    7: { name: "Tapioca de Frango c/ Batata Doce", price:11.50}, 
+    8: { name: "Tapioca de Pizza", price:11},
+    9: { name: "Tapiproteica", price:16.50},
+    10: { name: "Tapiegg", price:10.50},
+    11: { name: "Tapifitness", price:11.50},
+    12: { name: "Tapioca de Banana c/ Canela", price:10.50},
     13: { name: "Tapioca de Banana Fitness", price:15}, 
-    14: { name: "Tapioca de Banana ao Mel", price:10},
-    15: { name: "Tapioca de Banana Gourmet", price:10.50},
-    16: { name: "Tapioca de Coco", price:10.50},
-    17: { name: "Tapioca da Casa", price:13.50},
-    18: { name: "Tapioca de Morango", price:10.50},
-    19: { name: "Tapioca de Doce de Abobóra c/ Creme de Ricota", price:13.50},
-    20: { name: "Tapioca de Prestígio",  price:13.50},
-    21: { name: "Tapioca Romeu e Julieta", price:9.50},
+    14: { name: "Tapioca de Banana ao Mel", price:12},
+    15: { name: "Tapioca de Banana Gourmet", price:12},
+    16: { name: "Tapioca de Coco", price:11.50},
+    17: { name: "Tapioca da Casa", price:14.50},
+    18: { name: "Tapioca de Morango", price:12},
+    19: { name: "Tapioca de Doce de Abobóra c/ Creme de Ricota", price:14},
+    20: { name: "Tapioca de Prestígio",  price:14.50},
+    21: { name: "Tapioca Romeu e Julieta", price:10.50},
     22: { name: "Copo 400ml", price:7},   
     23: { name: "Copo 500ml" ,price:8},    
     24: { name: "Garrafa 500ml", price:10},   
     25: { name: "Garrafa 1l", price:18},  
     26: { name: "Garrafa 2l", price:28},
-    27: { name: "Natural", price:0},
+    27: { name: "Suco Natural de Laranja", price:13.50},
     28: { name: "Limão", price:0},
     29: { name: "Abacaxi", price:0},
     30: { name: "Gengibre", price:0},
     31: { name: "Maracujá", price:0},      
-    32: { name: "Limão, Abacaxi, Gengibre, Maracujá", price:0},
-    33: { name: "Coco Verde Gelado", price:10}, 
+    32: { name: "Tapioca de Carne Bovina Especial", price:24.50},
+    33: { name: "Coco Verde Gelado", price:10.50}, 
     34: { name: "Garrafa Coco", price:12},   
     35: { name: "Água Garrafa", price:3},  
     36: { name: "Refrigerante em lata", price:6},    
-    37: { name: "Café Espresso Supremo Puro ou c/ Leite", price:5},    
-    38: { name: "Café Melitta Filtrado Puro ou c/ Leite", price:5},    
+    37: { name: "Café Espresso Supremo Puro ou c/ Leite", price:6},    
+    38: { name: "Café Melitta Filtrado Puro ou c/ Leite", price:6},    
     39: { name: "Chá Mate Quente Natural ou Sabores", price:4},      
-    40: { name: "Chocolatto Espresso Levemente Adocicado", price:8},
+    40: { name: "Chocolatto Espresso Levemente Adocicado", price:8.50},
     41: { name: "Chocolate Nestlé 100% Cacau", price:8},
     42: { name: "Achocolatado Nescau", price:5},
     43: { name: "Geladinho de Abacate", price:3.50},   
@@ -107,9 +107,10 @@ function mostarTap() {
         '16 - Tapioca de Coco <br>'+
         '17 - Tapioca da Casa <br>'+
         '18 - Tapioca de Morango <br>'+
-        '19 - Tapioca Julieta e Catupiry <br>'+
+        '19 - Tapioca de Doce de Abobóra c/ Creme de Ricota <br>'+
         '20 - Tapioca de Prestígio <br>'+
-        '21 - Tapioca Romeu e Julieta <br>'
+        '21 - Tapioca Romeu e Julieta <br>'+
+        '32 - Tapioca de Carne Bovina Especial <br>'
 
 }
 
@@ -124,12 +125,11 @@ function mostarCal() {
     '25 - Garrafa 1l <br>'+ 
     '26 - Garrafa 2l <br>'+
     '<br><hr style="width: 350px"><br>'+
-    '27 - Natural<br>'+
+    '27 - Suco Natural de Laranja<br>'+
     '28 - Limão<br>'+
     '29 - Abacaxi <br>'+
     '30 - Gengibre <br>'+
-    '31 - Maracujá <br>'+    
-    '32 - Limão, Abacaxi, Gengibre, Maracujá <br>'
+    '31 - Maracujá <br>'
 
 }
 
